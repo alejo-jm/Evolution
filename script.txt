@@ -1,0 +1,44 @@
+CREATE DATABASE IF NOT EXISTS pruebas;
+ 
+USE pruebas;
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `nombre` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `contrasena` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL
+  `correo` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+ 
+ALTER TABLE `usuarios``
+  ADD PRIMARY KEY (`id`);
+ 
+ALTER TABLE `usuarios``
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
+USE pruebas;
+CREATE TABLE `tareas` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `prioridad` varchar(20) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `fecha_vencimiento` date COLLATE utf8mb4_spanish2_ci NOT NULL
+  `usuario` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+ 
+ALTER TABLE `tareas``
+  ADD PRIMARY KEY (`id`);
+ 
+ALTER TABLE `tareas``
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
+USE pruebas;
+CREATE TABLE `prioridades` (
+  `id` int(11) NOT NULL,
+  `cod_prioridad` int(4) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `nombre_prioridad` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+ 
+ALTER TABLE `prioridades``
+  ADD PRIMARY KEY (`id`);
+ 
+ALTER TABLE `prioridades``
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;  
