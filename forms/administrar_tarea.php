@@ -18,8 +18,10 @@ $datos_prioridad= new Prioridades();
 		$datos_tarea->setNombre($_POST['nombre']);
 		$datos_tarea->setPrioridad($_POST['prioridad']);
 		$datos_tarea->setFechavencimiento($_POST['fecha_vencimiento']);
-		//llama a la funciÛn insertar definida en el crud
+		//llama a la funci√≥n insertar definida en el crud
+	    
 		$crud->insertar($datos_tarea);
+	    
 //		header('Location: mostrar.php?usu=$usu&nom_usu=$nombre_usu');
 		$usu=$_POST['usu'];
 		$nombre_usu=$_POST['nom_usu'];
@@ -50,7 +52,7 @@ $datos_prioridad= new Prioridades();
 		$usu=$_GET['usu'];
 		$nombre_usu=$_GET['nom_usu'];
         echo "<script>window.location='mostrar.php?usu=$usu&nom_usu=$nombre_usu'; </script>";										
-	// si la variable accion enviada por GET es == 'a', envÌa a la p·gina actualizar.php 
+	// si la variable accion enviada por GET es == 'a', env√≠a a la p√°gina actualizar.php 
 	}elseif($_GET['accion']=='a'){
 		header('Location: actualizar.php');
 	}
